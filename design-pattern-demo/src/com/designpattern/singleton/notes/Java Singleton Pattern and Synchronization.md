@@ -1,11 +1,11 @@
-#Java Singleton Pattern and Synchronization
+# Java Singleton Pattern and Synchronization
 
-##What is Singleton pattern
+## What is Singleton pattern
 
 The singleton pattern is a software design pattern that is used to instantiate class to one object.
 This pattern is useful when we want to have a single instance of class across the application. For example to keep API token after successful login.
 
-##Simple singleton pattern implementation
+## Simple singleton pattern implementation
 The following implementation is the simplest singleton pattern. 
 I have declared a private static class member called instance and I hid the constructor of the class by declaring private constructor to prevent class
 being initiated from outside. To obtain a class instance I implemented the getInstance() method which creates a new instance if it is not yet created, 
@@ -27,11 +27,11 @@ public static class Singleton {
    }
 }
 ```
-##What will happen if two threads call getInstance() method at the same time?
+## What will happen if two threads call getInstance() method at the same time?
 In that case the second thread is going to create a new instance of Singleton class and override the existing instance 
 which has been created by the first thread. In order to improve that we are going to implement a synchronization block.
 
-##Implement Synchronization
+## Implement Synchronization
 Synchronization prevents a block of code to be executed by more than one thread at the same time.
 
 To improve our Singleton pattern I have just added synchronized keyword in method declaration. In the following example only one 
