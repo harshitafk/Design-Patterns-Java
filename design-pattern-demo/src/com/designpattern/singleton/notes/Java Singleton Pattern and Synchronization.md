@@ -28,18 +28,18 @@ public static class Singleton {
 }
 ```
 ## What will happen if two threads call `getInstance()` method at the same time?
-In that case the second thread is going to create a new instance of Singleton class and override the existing instance 
+In that case the second thread is going to create a new instance of `Singleton` class and override the existing instance 
 which has been created by the first thread. In order to improve that we are going to implement a synchronization block.
 
 ## Implement Synchronization
 > Synchronization prevents a block of code to be executed by more than one thread at the same time.
 
-To improve our Singleton pattern I have just added synchronized keyword in method declaration. In the following example only one 
-thread can enter the getInstance() method and execute code at the time. 
+To improve our Singleton pattern I have just added `synchronized` keyword in method declaration. In the following example only one 
+thread can enter the `getInstance()` method and execute code at the time. 
 
 More specifically, the first thread is going to obtain
-a lock from Singleton class, execute the method, create an instance of Singleton class and return the monitor. 
-Once the key monitor for Singleton class is free to use, the second thread is going to take lock from Singleton class, 
+a lock from `Singleton` class, execute the method, create an instance of Singleton class and return the monitor. 
+Once the key monitor for `Singleton` class is free to use, the second thread is going to take lock from Singleton class, 
 execute the method, obtain already created instance and return the key monitor.
 
 ```
@@ -64,7 +64,7 @@ This implementation of singleton pattern is widely used and can be found almost 
 Because we acquire a lock on the method for every read and write. Synchronization is useful just once when instance is null, after that every call returns a constant result and it is no longer useful.
 
 ## Double check singleton pattern
-In the following implementation we will acquire lock on getInstance() method once, to create instance and after that we will read instance without acquiring the lock.
+In the following implementation we will acquire lock on `getInstance()` method once, to create instance and after that we will read instance without acquiring the lock.
 
 ```
 public static class Singleton {
@@ -89,8 +89,8 @@ public static class Singleton {
 }
 ```
 
-However this implementation is buggy if we forget to declare the variable instance as `volatile.` Without `volatile` we don't have happens before link between synchronize write and read. Volatile ensure that multiple threads read the correct instance value. When a variable is declared volatile we suggest the compiler to never store the value of the variable in cache memory.
-So we are going to fix it by adding happens before link between synchronize write and volatile read by declaring variable instance volatile.
+However this implementation is buggy if we forget to declare the variable instance as `volatile.` Without `volatile` we don't have happens before link between synchronize write and read. Volatile ensure that multiple threads read the correct instance value. When a variable is declared `volatile` we suggest the compiler to never store the value of the variable in cache memory.
+So we are going to fix it by adding happens before link between synchronize write and volatile read by declaring variable instance `volatile`.
 
 ```
 public static class Singleton {
@@ -115,9 +115,10 @@ public static class Singleton {
 }
 ```
 
-With volatile we solve the problem but we still have the similar performance issue since volatile tells the compiler that optimisations must be avoided.
-The right way to implement Singleton pattern in java
-The best method of making singleton in Java is by using enum. The following implementation is simple, easy to understand and clean.
+With `volatile` we solve the problem but we still have the similar performance issue since `volatile` tells the compiler that optimisations must be avoided.
+
+## The right way to implement Singleton pattern in java
+The best method of making singleton in Java is by using `enum`. The following implementation is simple, easy to understand and clean.
 
 ```
 public enum Singleton {
