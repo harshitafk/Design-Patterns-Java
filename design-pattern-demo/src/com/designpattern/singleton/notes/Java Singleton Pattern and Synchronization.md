@@ -1,5 +1,7 @@
 # Java Singleton Pattern and Synchronization
 
+![Singleton Pattern](design-pattern-demo/src/com/designpattern/singleton/notes/singleton.jpeg)
+
 ## What is Singleton pattern
 
 > The singleton pattern is a software design pattern that is used to instantiate class to one object.
