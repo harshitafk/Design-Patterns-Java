@@ -1,6 +1,6 @@
 # Java Singleton Pattern and Synchronization
 
-![Singleton Pattern](design-pattern-demo/src/com/designpattern/singleton/notes/singleton.jpeg)
+![Singleton Pattern](./design-pattern-demo/src/com/designpattern/singleton/notes/singleton.jpeg)
 
 ## What is Singleton pattern
 
