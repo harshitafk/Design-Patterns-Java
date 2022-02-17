@@ -9,8 +9,15 @@ public class SingletonMain {
 		System.out.println(singleton2);
 
 		SingletonLazyLoadDemo singletonlazyloaddemo = SingletonLazyLoadDemo.getInstance();
-		System.out.println(singleton);
+		System.out.println(singletonlazyloaddemo);
 		SingletonLazyLoadDemo singletonlazyloaddemo2 = SingletonLazyLoadDemo.getInstance();
-		System.out.println(singleton2);
+		System.out.println(singletonlazyloaddemo2);
+		
+		
+		SingletonEnum singletonEnum = SingletonEnum.INSTANCE;
+		  
+        System.out.println(singletonEnum.getValue());
+        singletonEnum.setValue(2);
+        System.out.println(singletonEnum.getValue());
 	}
 }

@@ -20,13 +20,11 @@ public class SingletonThreadSafeDemo {
 	}
 
 	/**
-	 * Method to check first if instance is not null, if it is then we synchronize
-	 * on it. Reason - It maybe null ,but if two thread are trying to go at it, once
-	 * we've synchronized and checked for null again, and if another class has lock
-	 * on that, it will then block our code and create the instance and return that
-	 * synchronized lock to where our code would now go back in and say, if this
-	 * instance is null it would go, oh,no I'm already created and returned back out
-	 * of this.
+	 * Method to check if instance is not null, if it is then we synchronize
+	 * on it. Reason - It maybe null ,but if two thread are trying to go at it, In
+	 * that case the second thread is going to create a new instance of Singleton
+	 * class and override the existing instance which has been created by the first
+	 * thread. In order to improve that we are going to implement a synchronization.
 	 * 
 	 */
 	public static SingletonThreadSafeDemo getInstance() {
