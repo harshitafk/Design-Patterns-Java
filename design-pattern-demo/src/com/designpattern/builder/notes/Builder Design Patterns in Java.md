@@ -5,14 +5,14 @@
 ## Introduction:
 Each design pattern comes to solve a well-known problem.
 
-## Why Builder Design Pattern? The Problem is with:
+## Why Builder Design Pattern? The Problem is with :
 
 ### Complex constructor.
-Multiple constructor having combinations of multiple parameter with nested objects
+> Multiple constructor having combinations of multiple parameter with nested objects
 ### Large number of parameters.
-having large number of field parameter is also the key point to consider.
+> having large number of field parameter is also the key point to consider.
 ### Immutability.
-You can force the immutability to the object once you are done with creation of object.
+> You can force the immutability to the object once you are done with creation of object.
 
 Builder pattern is a creational design pattern it means its solves problem related 
 to object creation.
