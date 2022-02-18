@@ -1,5 +1,7 @@
 # Builder Design Patterns in Java
 
+![Builder Pattern](https://github.com/harshitafk/Design-Patterns-Java/blob/master/design-pattern-demo/src/com/designpattern/builder/notes/Builder%20Pattern%20Code.gif)
+
 ## Introduction:
 Each design pattern comes to solve a well-known problem.
 
@@ -45,7 +47,7 @@ public class Human {
 }
 ```
 
-A constructor with a limited number of parameters won’t be something that will make your code unreadable.
+A constructor with a limited number of parameters wonâ€™t be something that will make your code unreadable.
 But what if now you have something like this :
 
 ```java
@@ -85,10 +87,13 @@ public class Human {
 The number of parameters to pass to the constructor will make the line of code unreadable.
 Yes, you can still use the setter to change the value of a property after you have initialized your object. 
 But what if all your fields are final because you want to render them immutable?  
-Or what if some fields are mandatory and others don’t?
+Or what if some fields are mandatory and others donâ€™t?
 
 
 ## Implementation of the builder pattern
+
+## Structure
+![Builder Structure](https://github.com/harshitafk/Design-Patterns-Java/blob/master/design-pattern-demo/src/com/designpattern/builder/notes/Builder%20Pattern%20Structure.png)
 
 ### Simple Example :
 We want to apply the Builder Design Pattern to the example of Student.
@@ -156,12 +161,12 @@ public class Student {
 
 To Apply Builder Design Patter we need a New Class to Collect Data Variables and 
 after the user fills all parameter data we Create Object from Student Class so we need 
-to Declare ‘SimpleStudentBuilder’ class.
+to Declare â€˜SimpleStudentBuilderâ€™ class.
 
 ## Notes :
-- We need to Declare this class ‘SimpleStudentBuilder’ inner in Student Class because we need to change Student Constructor to private and an inner class, 
+- We need to Declare this class â€˜SimpleStudentBuilderâ€™ inner in Student Class because we need to change Student Constructor to private and an inner class, 
   we can init the new object form Student.
-- We Need also Declare ‘SimpleStudentBuilder’ Static because we can use it from outer class and not init object from student :)
+- We Need also Declare â€˜SimpleStudentBuilderâ€™ Static because we can use it from outer class and not init object from student :)
 
 
 ## SimpleStudentBuilder Class:
@@ -251,7 +256,7 @@ to apply this idea you need
 - A number of interfaces with the same number of Require variables so in 
   Our example Student class we need 4 interfaces and in addition, 
   we need one more interface for Build Method and optional variables.
-- Class is implemented all the above interfaces we need captions this ‘Steps’
+- Class is implemented all the above interfaces we need captions this â€˜Stepsâ€™
 
 ## The explanation for Usage StudentStepBuilder:
 When we need to use this approach of builder you need to show in first time only id set method and if the user fil it, 
@@ -355,13 +360,9 @@ public class StudentStepBuilder {
 
     }
 ```
+## Usage StudentStepBuilder:
 
-
-
-
-
-
-
+![Builder Structure](https://github.com/harshitafk/Design-Patterns-Java/blob/master/design-pattern-demo/src/com/designpattern/builder/notes/Builder%20Pattern%20Code.gif)
 
 ## Pros
 1. Code is more maintainable if number of fields required to create object is more than 4 or 5.
@@ -373,12 +374,12 @@ public class StudentStepBuilder {
 
 
 ## When should you use this pattern?
-1. Use this pattern when a complex configuration process is required to create an object and you don’t want the default configuration values to be disseminated throughout the application.
+1. Use this pattern when a complex configuration process is required to create an object and you donâ€™t want the default configuration values to be disseminated throughout the application.
 2. This pattern is useful when you have lots of optional parameters
 3. When you have to modify values later at any point of time
 
-##When should you avoid this pattern?
-1. Don’t use this pattern when every data value required to create an object will be different for each instance.
+## When should you avoid this pattern?
+1. Donâ€™t use this pattern when every data value required to create an object will be different for each instance.
 
-##Any related patterns:
+## Any related patterns:
 1. This pattern can be combined with the factory method or abstract factory patterns
