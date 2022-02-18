@@ -8,19 +8,19 @@ Each design pattern comes to solve a well-known problem.
 ## Why Builder Design Pattern? The Problem is with :
 
 ### Complex constructor.
-> Multiple constructor having combinations of multiple parameter with nested objects
+> Multiple constructor having combinations of `multiple parameter` with nested objects
 ### Large number of parameters.
-> having large number of field parameter is also the key point to consider.
+> having `large number of field parameter` is also the key point to consider.
 ### Immutability.
 > You can force the immutability to the object once you are done with creation of object.
 
-Builder pattern is a creational design pattern it means its solves problem related 
-to object creation.
-Best example would be StringBuilder, DocumentBuilder best to see how the compex object can be created.
+Builder pattern is a `creational design pattern` it means its solves problem related 
+to `object creation`.
+Best example would be `StringBuilder, DocumentBuilder` best to see how the compex object can be created.
  
-It typically solve problem in object oriented programming i.e determining what constructor to use. 
+It typically solve problem in object oriented programming i.e determining what `constructor` to use. 
 Often we write many constructor and it is really hard to manage them. 
-The multiple constructor with combination of multiple parameters variation is called the telescoping constructor. 
+The multiple constructor with combination of multiple parameters variation is called the `telescoping constructor`. 
 
 > Builder pattern is used to create instance of very complex object having telescoping constructor in easiest way.
 
@@ -84,10 +84,10 @@ public class Human {
     }
 }
 ```
-The number of parameters to pass to the constructor will make the line of code unreadable.
+The number of parameters to pass to the `constructor` will make the line of code `unreadable`.
 Yes, you can still use the setter to change the value of a property after you have initialized your object. 
 But what if all your fields are final because you want to render them immutable?  
-Or what if some fields are mandatory and others don’t?
+Or What if some fields are mandatory and others don’t?
 
 
 ## Implementation of the builder pattern
@@ -159,14 +159,14 @@ public class Student {
 
 ```
 
-To Apply Builder Design Patter we need a New Class to Collect Data Variables and 
-after the user fills all parameter data we Create Object from Student Class so we need 
+To Apply Builder Design Patter we need a New Class to `Collect Data Variables` and 
+after the user fills all parameter data we `Create Object` from Student Class so we need 
 to Declare ‘SimpleStudentBuilder’ class.
 
 ## Notes :
-- We need to Declare this class ‘SimpleStudentBuilder’ inner in Student Class because we need to change Student Constructor to private and an inner class, 
+- We need to Declare this class ‘SimpleStudentBuilder’ inner in Student Class because we need to change Student Constructor to `private` and an `inner class`, 
   we can init the new object form Student.
-- We Need also Declare ‘SimpleStudentBuilder’ Static because we can use it from outer class and not init object from student :)
+- We Need also Declare ‘SimpleStudentBuilder’ `Static` because we can use it from outer class and not init object from student :)
 
 
 ## SimpleStudentBuilder Class:
@@ -246,8 +246,8 @@ public static void main(String[] args) {
 ```
 
 ## Deep In Builder Design Patter :)
-Suppose in Student Constructor we have priority in passing parameter values for example in order [ id, name, major, mobile number ] 
-If this arrangement disappears you will not be able to create an Object from Class Student.
+Suppose in Student `Constructor` we have priority in passing parameter values for example in order [ id, name, major, mobile number ] 
+If this arrangement disappears you will not be able to create an `Object` from Class Student.
 so we need to answer to this situation the answer is Step Builder, 
 but how we can implement this answer. keep reading :)
 
@@ -365,10 +365,10 @@ public class StudentStepBuilder {
 ![Builder Pattern Structure](https://github.com/harshitafk/Design-Patterns-Java/blob/master/design-pattern-demo/src/com/designpattern/builder/notes/Builder%20Pattern%20Code.gif)
 
 ## Pros
-1. Code is more maintainable if number of fields required to create object is more than 4 or 5.
-2. Object Creation code less error-prone as user will know what they are passing because of explicit method call.
-3. Builder pattern increase robustness, as only fully constructed object will be available to client.
-4. You can force immutability to the object once its created.
+1. Code is more `maintainable` if number of fields required to create object is more than 4 or 5.
+2. Object Creation code `less error-prone` as user will know what they are passing because of explicit method call.
+3. Builder pattern `increase robustness`, as only fully constructed object will be available to client.
+4. You can force `immutability` to the object once its created.
 ## Cons
 1. Builder pattern is verbose and requires code duplication as Builder needs to copy all fields from Original or Item class.
 
@@ -382,4 +382,4 @@ public class StudentStepBuilder {
 1. Don’t use this pattern when every data value required to create an object will be different for each instance.
 
 ## Any related patterns:
-1. This pattern can be combined with the factory method or abstract factory patterns
+1. This pattern can be combined with the `factory method` or `abstract factory patterns`
