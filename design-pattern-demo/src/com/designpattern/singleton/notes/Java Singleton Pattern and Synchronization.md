@@ -14,7 +14,7 @@ being initiated from outside. To obtain a class instance I implemented the `getI
 otherwise the method returns an existing instance.
 
 
-```
+```java
 public static class Singleton {
    private static Singleton instance = null;
 
@@ -44,7 +44,7 @@ a lock from `Singleton` class, execute the method, create an instance of Singlet
 Once the key monitor for `Singleton` class is free to use, the second thread is going to take lock from Singleton class, 
 execute the method, obtain already created instance and return the key monitor.
 
-```
+```java
 public static class Singleton {
    private static Singleton instance = null;
 
@@ -68,7 +68,7 @@ Because we acquire a lock on the method for every read and write. Synchronizatio
 ## Double check singleton pattern
 In the following implementation we will acquire lock on `getInstance()` method once, to create instance and after that we will read instance without acquiring the lock.
 
-```
+```java
 public static class Singleton {
    private static final Object object = new Object();
    private static Singleton instance = null;
@@ -94,7 +94,7 @@ public static class Singleton {
 However this implementation is buggy if we forget to declare the variable instance as `volatile.` Without `volatile` we don't have happens before link between synchronize write and read. Volatile ensure that multiple threads read the correct instance value. When a variable is declared `volatile` we suggest the compiler to never store the value of the variable in cache memory.
 So we are going to fix it by adding happens before link between synchronize write and volatile read by declaring variable instance `volatile`.
 
-```
+```java
 public static class Singleton {
    private static final Object object = new Object();
    private static volatile Singleton instance = null;
@@ -122,7 +122,7 @@ With `volatile` we solve the problem but we still have the similar performance i
 ## The right way to implement Singleton pattern in java
 The best method of making singleton in Java is by using `enum`. The following implementation is simple, easy to understand and clean.
 
-```
+```java
 public enum Singleton {
    INSTANCE;
 
