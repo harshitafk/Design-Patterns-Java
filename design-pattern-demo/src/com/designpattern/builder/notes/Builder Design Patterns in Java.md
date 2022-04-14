@@ -374,9 +374,9 @@ public class StudentStepBuilder {
 
 
 ## When should you use this pattern?
-1. Use this pattern when a complex configuration process is required to create an object and you don’t want the default configuration values to be disseminated throughout the application.
-2. This pattern is useful when you have lots of optional parameters
-3. When you have to modify values later at any point of time
+1. Use this pattern when a `complex configuration process` is required to create an object and you don’t want the default configuration values to be disseminated throughout the application.
+2. This pattern is useful when you have `lots of optional parameters`
+3. When you have to `modify values later at any point of time`
 
 ## When should you avoid this pattern?
 1. Don’t use this pattern when every data value required to create an object will be different for each instance.
