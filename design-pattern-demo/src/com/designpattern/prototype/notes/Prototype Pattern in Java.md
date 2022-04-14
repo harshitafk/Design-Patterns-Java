@@ -40,7 +40,8 @@ You may improve the application preference by saving the object creation time.
 ## UML diagram for the previous example :
 > Here you can see The Customer class has two different sub-classes called RegularCustomer and LoyalCustomer. 
 > If we don’t use any design pattern, we have to create instances by new keyword.
-> ex:- `RegularCustomer rc = new RegularCustomer();`
+> Ex:- `RegularCustomer rc = new RegularCustomer();`
+
 But here we can clone the existing object. Let’s see the code now.
 
 ![UML Diagram](https://github.com/harshitafk/Design-Patterns-Java/blob/bce0e08e54f0464af416735439dc6083f8827501/design-pattern-demo/src/com/designpattern/prototype/notes/UML%20Diagram.jpeg)
