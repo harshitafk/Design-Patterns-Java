@@ -1,6 +1,6 @@
-# Prototype design pattern — Java
+# Prototype design pattern â€” Java
 
-![Prototype Pattern](https://github.com/harshitafk/Design-Patterns-Java/blob/bce0e08e54f0464af416735439dc6083f8827501/design-pattern-demo/src/com/designpattern/prototype/notes/prototype-design-pattern.jpg | width=500)
+<img src="https://github.com/harshitafk/Design-Patterns-Java/blob/bce0e08e54f0464af416735439dc6083f8827501/design-pattern-demo/src/com/designpattern/prototype/notes/prototype-design-pattern.jpg" width="1000" height="400" />
 
 In some situations, creating a new object is very expensive. 
 Because the application may be facing performance issues. Instead, the prototype design pattern encourages you to clone the existing object.
@@ -20,7 +20,7 @@ Normally you have to create an instance of Customer class for each customer.
 If you use the prototype pattern, you can create a single instance of customer class and clone it. 
 You may improve the application preference by saving the object creation time.
 
-## Before getting to implementation, let’s see two types of copying an object.
+## Before getting to implementation, letâ€™s see two types of copying an object.
 
 - Shallow Copy - When we use the default clone method, 
                 it will create a shallow copy of the object. 
@@ -39,9 +39,12 @@ You may improve the application preference by saving the object creation time.
              
 ## UML diagram for the previous example :
 > Here you can see The Customer class has two different sub-classes called RegularCustomer and LoyalCustomer. 
-> If we don’t use any design pattern, we have to create instances by new keyword.
-> ex:- `RegularCustomer rc = new RegularCustomer();`
-But here we can clone the existing object. Let’s see the code now.
+> 
+> If we donâ€™t use any design pattern, we have to create instances by new keyword.
+> 
+> Ex:- `RegularCustomer rc = new RegularCustomer();`
+
+But here we can clone the existing object. Letâ€™s see the code now.
 
 ![UML Diagram](https://github.com/harshitafk/Design-Patterns-Java/blob/bce0e08e54f0464af416735439dc6083f8827501/design-pattern-demo/src/com/designpattern/prototype/notes/UML%20Diagram.jpeg)
 
@@ -137,7 +140,7 @@ public enum CustomerType {
 ```
 I just implemented LoyalCustomer and RegularCustomer classes for demo purposes.
 LoyolCustomer class has three fields such as name, contactNo, discountRate. 
-Let’s see how to create clone objects by Registry class.
+Letâ€™s see how to create clone objects by Registry class.
 
 ### Registry class
 
