@@ -245,14 +245,14 @@ public static void main(String[] args) {
 }
 ```
 
-## Deep In Builder Design Patter :)
+## Deep In Builder Design Pattern :)
 Suppose in Student `Constructor` we have priority in passing parameter values for example in order [ id, name, major, mobile number ] 
 If this arrangement disappears you will not be able to create an `Object` from Class Student.
 so we need to answer to this situation the answer is Step Builder, 
 but how we can implement this answer. keep reading :)
 
-## Step Builder Design Patter :
-to apply this idea you need
+## Step Builder Design Pattern :
+To apply this idea you need
 - A number of interfaces with the same number of Require variables so in 
   Our example Student class we need 4 interfaces and in addition, 
   we need one more interface for Build Method and optional variables.
