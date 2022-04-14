@@ -1,6 +1,6 @@
 # Prototype design pattern — Java
 
-![Prototype Pattern](https://github.com/harshitafk/Design-Patterns-Java/blob/bce0e08e54f0464af416735439dc6083f8827501/design-pattern-demo/src/com/designpattern/prototype/notes/prototype-design-pattern.jpg|width=500px)
+![Prototype Pattern](https://github.com/harshitafk/Design-Patterns-Java/blob/bce0e08e54f0464af416735439dc6083f8827501/design-pattern-demo/src/com/designpattern/prototype/notes/prototype-design-pattern.jpg | width=500)
 
 In some situations, creating a new object is very expensive. 
 Because the application may be facing performance issues. Instead, the prototype design pattern encourages you to clone the existing object.
