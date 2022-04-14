@@ -45,7 +45,7 @@ public class Human {
 }
 ```
 
-A constructor with a limited number of parameters won’t be something that will make your code unreadable.
+A constructor with a limited number of parameters wonâ€™t be something that will make your code unreadable.
 But what if now you have something like this :
 
 ```java
@@ -85,7 +85,7 @@ public class Human {
 The number of parameters to pass to the constructor will make the line of code unreadable.
 Yes, you can still use the setter to change the value of a property after you have initialized your object. 
 But what if all your fields are final because you want to render them immutable?  
-Or what if some fields are mandatory and others don’t?
+Or what if some fields are mandatory and others donâ€™t?
 
 
 ## Implementation of the builder pattern
@@ -156,12 +156,12 @@ public class Student {
 
 To Apply Builder Design Patter we need a New Class to Collect Data Variables and 
 after the user fills all parameter data we Create Object from Student Class so we need 
-to Declare ‘SimpleStudentBuilder’ class.
+to Declare â€˜SimpleStudentBuilderâ€™ class.
 
 ## Notes :
-- We need to Declare this class ‘SimpleStudentBuilder’ inner in Student Class because we need to change Student Constructor to private and an inner class, 
+- We need to Declare this class â€˜SimpleStudentBuilderâ€™ inner in Student Class because we need to change Student Constructor to private and an inner class, 
   we can init the new object form Student.
-- We Need also Declare ‘SimpleStudentBuilder’ Static because we can use it from outer class and not init object from student :)
+- We Need also Declare â€˜SimpleStudentBuilderâ€™ Static because we can use it from outer class and not init object from student :)
 
 
 ## SimpleStudentBuilder Class:
@@ -240,18 +240,18 @@ public static void main(String[] args) {
 }
 ```
 
-## Deep In Builder Design Patter :)
+## Deep In Builder Design Pattern :)
 Suppose in Student Constructor we have priority in passing parameter values for example in order [ id, name, major, mobile number ] 
 If this arrangement disappears you will not be able to create an Object from Class Student.
 so we need to answer to this situation the answer is Step Builder, 
 but how we can implement this answer. keep reading :)
 
-## Step Builder Design Patter :
+## Step Builder Design Pattern :
 to apply this idea you need
 - A number of interfaces with the same number of Require variables so in 
   Our example Student class we need 4 interfaces and in addition, 
   we need one more interface for Build Method and optional variables.
-- Class is implemented all the above interfaces we need captions this ‘Steps’
+- Class is implemented all the above interfaces we need captions this â€˜Stepsâ€™
 
 ## The explanation for Usage StudentStepBuilder:
 When we need to use this approach of builder you need to show in first time only id set method and if the user fil it, 
@@ -373,12 +373,12 @@ public class StudentStepBuilder {
 
 
 ## When should you use this pattern?
-1. Use this pattern when a complex configuration process is required to create an object and you don’t want the default configuration values to be disseminated throughout the application.
+1. Use this pattern when a complex configuration process is required to create an object and you donâ€™t want the default configuration values to be disseminated throughout the application.
 2. This pattern is useful when you have lots of optional parameters
 3. When you have to modify values later at any point of time
 
 ##When should you avoid this pattern?
-1. Don’t use this pattern when every data value required to create an object will be different for each instance.
+1. Donâ€™t use this pattern when every data value required to create an object will be different for each instance.
 
 ##Any related patterns:
 1. This pattern can be combined with the factory method or abstract factory patterns
