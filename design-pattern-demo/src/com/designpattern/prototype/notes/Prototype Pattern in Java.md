@@ -1,6 +1,6 @@
 # Prototype design pattern — Java
 
-![Prototype Pattern](https://github.com/harshitafk/Design-Patterns-Java/blob/bce0e08e54f0464af416735439dc6083f8827501/design-pattern-demo/src/com/designpattern/prototype/notes/prototype-design-pattern.jpg)
+![Prototype Pattern](https://github.com/harshitafk/Design-Patterns-Java/blob/bce0e08e54f0464af416735439dc6083f8827501/design-pattern-demo/src/com/designpattern/prototype/notes/prototype-design-pattern.jpg|width=500px)
 
 In some situations, creating a new object is very expensive. 
 Because the application may be facing performance issues. Instead, the prototype design pattern encourages you to clone the existing object.
@@ -27,11 +27,14 @@ You may improve the application preference by saving the object creation time.
                 It means the cloned object will have the same state as the source object. 
                 In shallow cloning only memory addresses are copied, 
                 if any changes are made in the field of the object, it will reflect to the cloned object as well. 
-                It works similar to deep cloning in case of primitives
+                It works similar to deep cloning in case of primitives.
+                
 ![Shallow Copy](https://github.com/harshitafk/Design-Patterns-Java/blob/bce0e08e54f0464af416735439dc6083f8827501/design-pattern-demo/src/com/designpattern/prototype/notes/Shallow%20Cloning.png)
+
 - Deep Copy - A deep cloning object will have the same state as shallow cloning but the original and cloned object will be fully disjoint. 
              They will be independent of each other. 
              If there is any change made to the clone object it will not be reflected in the original object or vice-versa.
+             
 ![Deep Copy](https://github.com/harshitafk/Design-Patterns-Java/blob/bce0e08e54f0464af416735439dc6083f8827501/design-pattern-demo/src/com/designpattern/prototype/notes/Deep%20Cloning.png)             
              
 ## UML diagram for the previous example :
@@ -211,20 +214,20 @@ public class Application {
 ```
 
 ## Where to use
--When a system needs to be independent of how its objects are created, composed, and represented.
--When adding and removing objects at runtime.
--When specifying new objects by changing an existing objects structure.
--When configuring an application with classes dynamically.
--When trying to keep the number of classes in a system to a minimum.
--When state population is an expensive or exclusive process.
+- When a system needs to be independent of how its objects are created, composed, and represented.
+- When adding and removing objects at runtime.
+- When specifying new objects by changing an existing objects structure.
+- When configuring an application with classes dynamically.
+- When trying to keep the number of classes in a system to a minimum.
+- When state population is an expensive or exclusive process.
 
 ## Benefits
--Speeds up instantiation of large, dynamically loaded classes.
--Reduced subclassing.
+- Speeds up instantiation of large, dynamically loaded classes.
+- Reduced subclassing.
 
 ## Drawbacks/consequences
--Each subclass of Prototype must implement the Clone operation.
--Could be difficult with existing classes which do not support copying.
+- Each subclass of Prototype must implement the Clone operation.
+- Could be difficult with existing classes which do not support copying.
         
 
 
