@@ -39,7 +39,9 @@ You may improve the application preference by saving the object creation time.
              
 ## UML diagram for the previous example :
 > Here you can see The Customer class has two different sub-classes called RegularCustomer and LoyalCustomer. 
+> 
 > If we don’t use any design pattern, we have to create instances by new keyword.
+> 
 > Ex:- `RegularCustomer rc = new RegularCustomer();`
 
 But here we can clone the existing object. Let’s see the code now.
