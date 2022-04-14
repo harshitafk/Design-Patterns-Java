@@ -1,6 +1,6 @@
 # Prototype design pattern — Java
 
-![Prototype Pattern]()
+![Prototype Pattern](https://github.com/harshitafk/Design-Patterns-Java/blob/bce0e08e54f0464af416735439dc6083f8827501/design-pattern-demo/bin/com/designpattern/prototype/notes/prototype-design-pattern.jpg)
 
 In some situations, creating a new object is very expensive. 
 Because the application may be facing performance issues. Instead, the prototype design pattern encourages you to clone the existing object.
@@ -11,7 +11,7 @@ Because the application may be facing performance issues. Instead, the prototype
 > So, the mechanism inside the Prototype pattern is cloning objects from an existing object. Actually, 
 this is not a very often used design pattern. But sometimes it is very useful.
 
-## Where to use the Prototype pattern
+### In short, Where to use the Prototype pattern?
 If the cost for creating a new object is expensive and costs resources.
 
 For example, assume you create an application to an online shop. 
@@ -28,11 +28,11 @@ You may improve the application preference by saving the object creation time.
                 In shallow cloning only memory addresses are copied, 
                 if any changes are made in the field of the object, it will reflect to the cloned object as well. 
                 It works similar to deep cloning in case of primitives
-![Shallow Copy]()
+![Shallow Copy](https://github.com/harshitafk/Design-Patterns-Java/blob/bce0e08e54f0464af416735439dc6083f8827501/design-pattern-demo/bin/com/designpattern/prototype/notes/Shallow%20Cloning.png)
 -Deep Copy - A deep cloning object will have the same state as shallow cloning but the original and cloned object will be fully disjoint. 
              They will be independent of each other. 
              If there is any change made to the clone object it will not be reflected in the original object or vice-versa.
-![Deep Copy]()             
+![Deep Copy](https://github.com/harshitafk/Design-Patterns-Java/blob/bce0e08e54f0464af416735439dc6083f8827501/design-pattern-demo/bin/com/designpattern/prototype/notes/Deep%20Cloning.png)             
              
 ## UML diagram for the previous example :
 > Here you can see The Customer class has two different sub-classes called RegularCustomer and LoyalCustomer. 
@@ -40,7 +40,7 @@ You may improve the application preference by saving the object creation time.
 > ex:- `RegularCustomer rc = new RegularCustomer();`
 But here we can clone the existing object. Let’s see the code now.
 
-![UML Diagram]()
+![UML Diagram](https://github.com/harshitafk/Design-Patterns-Java/blob/bce0e08e54f0464af416735439dc6083f8827501/design-pattern-demo/bin/com/designpattern/prototype/notes/UML%20Diagram.jpeg)
 
 ### Customer Class
 
@@ -209,6 +209,22 @@ public class Application {
     }
 }
 ```
+
+## Where to use
+-When a system needs to be independent of how its objects are created, composed, and represented.
+-When adding and removing objects at runtime.
+-When specifying new objects by changing an existing objects structure.
+-When configuring an application with classes dynamically.
+-When trying to keep the number of classes in a system to a minimum.
+-When state population is an expensive or exclusive process.
+
+## Benefits
+-Speeds up instantiation of large, dynamically loaded classes.
+-Reduced subclassing.
+
+## Drawbacks/consequences
+-Each subclass of Prototype must implement the Clone operation.
+-Could be difficult with existing classes which do not support copying.
         
 
 
