@@ -74,7 +74,8 @@ public abstract class Customer implements Cloneable {
     protected Object clone() throws CloneNotSupportedException {
         return super.clone();
     }
-}```
+}
+```
   
 The `clone()` method is a protected method. 
 Therefore, we need to implement the Customer class by the Cloneable interface. 
