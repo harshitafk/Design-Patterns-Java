@@ -1,6 +1,6 @@
 # Builder Design Patterns in Java
 
-![Builder Pattern](https://github.com/harshitafk/Design-Patterns-Java/blob/master/design-pattern-demo/src/com/designpattern/builder/notes/Builder%20pattern.png)
+![Builder Pattern](https://github.com/harshitafk/Design-Patterns-Java/blob/master/design-pattern-demo/src/com/designpattern/creational/builder/notes/Builder%20pattern.png)
 
 ## Introduction:
 Each design pattern comes to solve a well-known problem.
