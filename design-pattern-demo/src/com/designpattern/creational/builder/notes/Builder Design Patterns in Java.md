@@ -1,6 +1,6 @@
 # Builder Design Patterns in Java
 
-![Builder Pattern](https://github.com/harshitafk/Design-Patterns-Java/blob/master/design-pattern-demo/src/com/designpattern/builder/notes/Builder%20pattern.png)
+![Builder Pattern](https://github.com/harshitafk/Design-Patterns-Java/blob/master/design-pattern-demo/src/com/designpattern/creational/builder/notes/Builder%20pattern.png)
 
 ## Introduction:
 Each design pattern comes to solve a well-known problem.
@@ -93,7 +93,7 @@ Or What if some fields are mandatory and others don’t?
 ## Implementation of the builder pattern
 
 ## Structure
-![Builder Structure](https://github.com/harshitafk/Design-Patterns-Java/blob/master/design-pattern-demo/src/com/designpattern/builder/notes/Builder%20Pattern%20Structure.png)
+![Builder Structure](https://github.com/harshitafk/Design-Patterns-Java/blob/master/design-pattern-demo/src/com/designpattern/creational/builder/notes/Builder%20Pattern%20Structure.png)
 
 ### Simple Example :
 We want to apply the Builder Design Pattern to the example of Student.
@@ -362,7 +362,7 @@ public class StudentStepBuilder {
 ```
 ## Usage StudentStepBuilder:
 
-![Builder Pattern Structure](https://github.com/harshitafk/Design-Patterns-Java/blob/master/design-pattern-demo/src/com/designpattern/builder/notes/Builder%20Pattern%20Code.gif)
+![Builder Pattern Structure](https://github.com/harshitafk/Design-Patterns-Java/blob/master/design-pattern-demo/src/com/designpattern/creational/builder/notes/Builder%20Pattern%20Code.gif)
 
 ## Pros
 1. Code is more `maintainable` if number of fields required to create object is more than 4 or 5.
